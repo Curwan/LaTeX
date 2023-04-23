@@ -1,0 +1,25 @@
+
+
+SPACES
+Several empty spaces/lines are treated the same as one empty space/line
+An empty line starts a new paragraph
+{} empty parameter adds a space
+
+SPECIAL CHARACTERS that won't print as text: # $ % ^ & _ { } ~ \ >> have special meaning
+Use prefix backlash to print:  \# \$ \% \^ \& \_ \{ \} \~ \
+\\ won't work for backslash: \textbackslash
+
+COMMANDS start with \ and a letter-only name.
+Command terminates by a space or one non-letter
+\TeX <prints TEX logo
+% renders wrong <<Douple space
+\Tex{} <<TEX logo with a space
+% renders correct <<leaves rest of line open, starts new line
+\texts1{word} <<italics
+\newline << ends line and starts new line
+
+COMMENT or add notes
+LaTeX ignores everything after % character in a specific line, will not show in print
+\begin{comment}
+sentence
+\end{comment} <<embed comments in document that won't print
