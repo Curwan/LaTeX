@@ -15,6 +15,7 @@ Command terminates by a space or one non-letter
 \Tex{} <<TEX logo with a space % renders correct <<ignores rest of line, starts new line
 \texts1{word} <<italics
 \newline << ends line and starts new line
+\\  << linebreak
 
 PAIRING COMMANDS highlighted in yellow when hovering cursor, not yellow, correct error
 \begin{center} <<{ needs a } bracket
@@ -45,3 +46,30 @@ The geometry package enables the user to set page layout details for a document,
 margins, position of headers and footers, text height and width.
 \usepackage[margins=3.5cm]{geometry}
 
+CREATE NEW COMMANDS
+\newcommand{\np}{\newpage} <<create abbreviation for New Page command
+
+Ensure numbers are correct by using , as decimal without a space after
+\DeclareMathSymbol{,}{\mathord}{letters}{"3B}
+
+EXAMPLE
+\documentclass{article} <<current date added automatically to article
+\usepackage{parskip} % paragraph style
+\usepackage[margin=3.5cm]{geometry} %page layout
+\DeclareMathSymbol{,}{\mathord}{letters}{"3B} %decimal comma
+\newcommand{\np}{\newpage}
+
+\begin{document}
+\title{DSC4830\\[3mm] %module code <<\\ seperate new lines and [] specifies space
+      Research project \\[5mm] %module name
+      Department of Decision Sciences\\[1cm] %department name
+      Assignment 1\\[5mm] %first assignment
+      Typing in \LaTeX\\[1cm] %title (choose yourself)
+      } << end of title
+\author{\textbf{\Large John Smith}\\[3mm] %Your name and surname
+       \textbf{\Large 12345678} %your student number
+       }
+  \maketitle <<Command after title and author for a title page
+\thispagestyle{empty} <<No page number for title only <<Command rigt before/after \maketitle command
+\np <<from preamble, ensures only title appears on first page
+\end{document}
