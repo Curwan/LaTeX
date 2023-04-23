@@ -11,15 +11,37 @@ Use prefix backlash to print:  \# \$ \% \^ \& \_ \{ \} \~ \
 
 COMMANDS start with \ and a letter-only name.
 Command terminates by a space or one non-letter
-\TeX <prints TEX logo
-% renders wrong <<Douple space
-\Tex{} <<TEX logo with a space
-% renders correct <<leaves rest of line open, starts new line
+\TeX <prints TEX logo % renders wrong 
+\Tex{} <<TEX logo with a space % renders correct <<ignores rest of line, starts new line
 \texts1{word} <<italics
 \newline << ends line and starts new line
+
+PAIRING COMMANDS highlighted in yellow when hovering cursor, not yellow, correct error
+\begin{center} <<{ needs a } bracket
+PREAMBLE
+\end{center}
 
 COMMENT or add notes
 LaTeX ignores everything after % character in a specific line, will not show in print
 \begin{comment}
 sentence
 \end{comment} <<embed comments in document that won't print
+
+IDENTIFY ERRORS
+first open line after error turns pink
+with red dot and white minus sign
+Clicking on error in Error tab takes you to the pink line with the error
+
+SET UP DOCUMENT
+\documentclass{article}    %Can be book, thesis etc.
+  (PREAMBLE)  <<Paragraph style, font size, letter size,  etc.
+\begin{document}   << text begins here
+  (TEXT)  << body of ducument (text) that will print
+\end{document}   <<text ends here
+
+\usepackage{parskip}  << Paragraph style with no indentation and an open line between paragraphs
+\documentclass[a4paper]{article}  << command options in preamble always in [] brackets
+The geometry package enables the user to set page layout details for a document, such as 
+margins, position of headers and footers, text height and width.
+\usepackage[margins=3.5cm]{geometry}
+
