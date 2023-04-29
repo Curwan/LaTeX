@@ -8,14 +8,20 @@ An empty line starts a new paragraph
 SPECIAL CHARACTERS that won't print as text: # $ % ^ & _ { } ~ \ >> have special meaning
 Use prefix backlash to print:  \# \$ \% \^ \& \_ \{ \} \~ \
 \\ won't work for backslash: \textbackslash
+Don't use the " for quotation marks. Use 2 single ''s
+``Please press the `x' key.''  <<Example
 
 COMMANDS start with \ and a letter-only name.
 Command terminates by a space or one non-letter
-\TeX <prints TEX logo % renders wrong 
+\today <<current date
+\TeX <<prints TEX logo % renders wrong 
 \Tex{} <<TEX logo with a space % renders correct <<ignores rest of line, starts new line
+\LaTeX
 \texts1{word} <<italics
-\newline << ends line and starts new line
-\\  << linebreak
+\newline << ends line and starts new line without starting a new paragraph
+\\  << linebreak, same as above
+\\*  <<prohibits a page break after a forced line break
+\newpage <<starts new page
 
 PAIRING COMMANDS highlighted in yellow when hovering cursor, not yellow, correct error
 \begin{center} <<{ needs a } bracket
@@ -40,6 +46,8 @@ SET UP DOCUMENT
   (TEXT)  << body of ducument (text) that will print
 \end{document}   <<text ends here
 
+How the PARAGRAPHS are typeset depends on the document class.
+Normally the first line of a paragraph is indented, and there is no additional space between two paragraphs.
 \usepackage{parskip}  << Paragraph style with no indentation and an open line between paragraphs
 \documentclass[options]{style}
 \documentclass[a4paper]{article}  << command options in preamble always in [] brackets
@@ -99,4 +107,25 @@ list of figures = notlof
 list of tables = notlot
 \usepackage[notlof,notlot]{tocbibind} <TOC without list of figures and tables
 
+INDEX alphabetical list of words that occur in the documet
+Activate makeidx or imakeidx package
+enter \index{word} instead of the word in the sentence, remember LaTeX is case sensitive
+\printindex <where index should appear at end of doc
 
+LINE BREAK & PAGE BREAK
+\newline << ends line and starts new line without starting a new paragraph
+\\  << linebreak, same as above
+\\*  <<prohibits a page break after a forced line break
+\newpage <<starts new page
+\linebreak[n], \nolinebreak[n] <<suggest places where a break may (or may not) happen - 0<n<4
+\pagebreak[n], \nopagebreak[n] <<suggest places where a break may (or may not) happen
+
+HYPHENATION
+\sloppy <<Lower hyphenating standards
+\fussy  <<set back to default standards
+\hyphenation{FORTRAN Hy-phen-a-tion} <<mark hyphenation points for specific words - Fortration can't be hypenated
+\- inserts a discretionary hyphen into a word:
+I think this is: su\-per\-cal\-i\-frag\-i\-lis\-tic\-ex\-pi\-al\-i\-do\-cious
+\mbox{0116 291 2319}  <<always print together
+\mbox{\emph{filename}}  <<together in italics
+\fbox{} <<visible box around content
