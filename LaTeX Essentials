@@ -41,6 +41,7 @@ SET UP DOCUMENT
 \end{document}   <<text ends here
 
 \usepackage{parskip}  << Paragraph style with no indentation and an open line between paragraphs
+\documentclass[options]{style}
 \documentclass[a4paper]{article}  << command options in preamble always in [] brackets
 The geometry package enables the user to set page layout details for a document, such as 
 margins, position of headers and footers, text height and width.
@@ -73,3 +74,29 @@ EXAMPLE
 \thispagestyle{empty} <<No page number for title only <<Command rigt before/after \maketitle command
 \np <<from preamble, ensures only title appears on first page
 \end{document}
+
+PAGE NUMBERING
+\pagenumbering{roman} <<for Introduction then change to
+\pagenumbering{arabic} \setcounter{page}{1} <<for the main part of the document
+
+TABLE OF CONTENTS
+\tableofcontents <<with \newpage before and after
+
+SECTIONS
+\section{Introduction} <numbered
+\section*{Heading} <unnumbered
+...sentence
+\subsection{Important Commands} <numbered i.e.1.1
+The commands are \verb|abc <\verb| prints bold
+
+BIBLIOGRAPHY not included in TOC.
+Use tocbibind package to add additional TOC objects
+Remove the Options using codes:
+bibliography = notbib
+index = notindex
+table of contents = nottoc
+list of figures = notlof
+list of tables = notlot
+\usepackage[notlof,notlot]{tocbibind} <TOC without list of figures and tables
+
+
