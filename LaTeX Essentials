@@ -158,10 +158,33 @@ H\^otel  <<Hôtel
 na\"\i ve  <<naïve, note the \i since it has a dot
 \'el\`eve  <<élève
 
+SPACING
 LaTeX inserts slightly more space at the end of a sentence, after a full stop.
 A backslash in front of a space generates a space that will not be enlarged
 Mr.~Smith sees cf.~Fig.~5  <<tilde ‘~’ generates space that cannot be enlarged and prohibits a line break
 I like BASIC\@. And you? << \@ in front of a full stop signals end of sentence after an uppercase letter
 
+Insert Larger Horizontal Spaces with \quad, \qquad or \hspace{...} commands
+Create \quad larger \qquad spaces \hspace{1.5cm} between \hspace{3cm} words  <<Example
+\hfill  <<aligns everything after command with the right margin
+More than one \hfill commands on the same line spreads the text evenly across the line
+DSC4830 \hfill Assignment 1 \hfill [100]  <<Example
 
+Add Vertical Space with \smallskip, \bigskip or \vspace{...} commands <<only work after linebreak or open line
+\vfill  <<same as \hfill in vertival direction
+\\[...] ex. \\[5mm] <<add vertical line space within a paragraph, table or array
+\vspace{-3mm} or \\[-3mm] <<descrease space
+
+FONT change for certain words
+\textbf{Bold face} or {\bf Bold face}  <<Headings
+\emph{Emphasize} or {\em Emphasize}  <<Emphasis
+\textit{Italic} or {\it Italic}  <<Emphasis, italic word in italic sentence will be normal
+\textrm{Roman letters} or {\rm Roman letters}  <<Words inside formulae
+\textsc{Small Caps} or {\sc Small Caps}  <<Fancy Headings
+\texttt{Typewrite} or {\tt Typewrite}  <<Computer input
+\underline{Underline}
+
+FONT SIZE with \tiny, \footnotesize, \small, \large, \LARGE or \Huge commands
+{\tiny smallest} \qquad {\footnotesize smaller} \qquad {\small small}
+\qquad {\large large} \qquad {\LARGE larger} \qquad {\Huge largest}
 
