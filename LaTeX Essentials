@@ -1,5 +1,3 @@
-
-
 SPACES
 Several empty spaces/lines are treated the same as one empty space/line
 An empty line starts a new paragraph
@@ -10,7 +8,6 @@ Use prefix backlash to print:  \# \$ \% \^ \& \_ \{ \} \~ \
 \\ won't work for backslash: \textbackslash
 Don't use the " for quotation marks. Use 2 single ''s
 ``Please press the `x' key.''  <<Example
-
 
 COMMANDS start with \ and a letter-only name.
 Command terminates by a space or one non-letter
@@ -100,7 +97,6 @@ The commands are \verb|abc <\verb| prints bold
 \paragraph{...}
 \subparagraph{...}
 All sectioning commands have “starred” versions that do not show up in the TOC and are not numbered
-
 
 BIBLIOGRAPHY not included in TOC.
 Use tocbibind package to add additional TOC objects
@@ -218,3 +214,15 @@ Heres a list with normal numbering:
 \end{description}
 
 \begin{abstract} and \end{abstract} <<Aastract section
+
+CROSS REFERENCING with \label{marker}, \ref{marker} and \pageref{marker} << market is user input
+When referring to a section, figure or table the number should never be typed in manually.
+A reference to this subsection \label{sec:this} looks like:
+``see section~\ref{sec:this} on page~\pageref{sec:this}.''  >>note tilde ~ sign
+Label -> Reference
+\label{sec:regression} -> Section~\ref{sec:regression}
+\label{fig:scatter} -> Figure~\ref{fig:scatter}
+\label{table:data} -> Tabel~\ref{table:data}
+\label{eq:regres} -> Equation~\ref{eq:regres}
+
+\footnote{footnote text}  >>put sentence footnotes after comma or full stop
