@@ -183,8 +183,38 @@ FONT change for certain words
 \textsc{Small Caps} or {\sc Small Caps}  <<Fancy Headings
 \texttt{Typewrite} or {\tt Typewrite}  <<Computer input
 \underline{Underline}
+\verb|\ldots|  <<prints the command ldots as a word
 
 FONT SIZE with \tiny, \footnotesize, \small, \large, \LARGE or \Huge commands
 {\tiny smallest} \qquad {\footnotesize smaller} \qquad {\small small}
 \qquad {\large large} \qquad {\LARGE larger} \qquad {\Huge largest}
 
+PARAGRAPH ALIGNMENT ENVIRONMENTS doesn't try to make each line the same length
+\begin{flushleft} and \end{flushleft}  <<left-aligned
+\begin{flushright} and \end{flushright}  <<right-aligned
+\begin{center} and \end{center}  <<center
+
+LIST ENVIRNONMENTS with enumerate, itemize, description and item commands
+\usepackage{paralist} <<change style of bullets and numbering
+Heres a list with normal numbering:
+\begin{enumerate}  <<specify numbering style
+  \item One     <<NO linebrakes \\ needed
+  \item Two
+\end{enumerate}
+\begin{enumerate}[(i)]  <<roman numbers
+\begin{enumerate}[(a)]  <<letter numbering
+\begin{compactenum}  <<compact enumerate list with no spacing
+
+\begin{itemize} <<normal bullets 
+\begin{itemize}[-]  <<dash bullets
+\begin{itemize}[$\star$]  <<star bullets
+\begin{itemize}[$\triangleright$]  <<triangle bullets
+\defaultitem{-}{}{}{}  <<change default bullets in document after \begin{document}
+\begin{compactitem}  <<compact itemize list with no spacing
+
+\begin{description}
+  \item[Stupid] things will not become smart because they are in a list.
+  \item[Smart] things can be presented beautifully in a list.
+\end{description}
+
+\begin{abstract} and \end{abstract} <<Aastract section
