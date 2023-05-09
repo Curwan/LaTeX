@@ -42,7 +42,7 @@ SET UP DOCUMENT
   (PREAMBLE)  <<Paragraph style, font size, letter size,  etc.
 \begin{document}   << text begins here
   (TEXT)  << body of ducument (text) that will print
-\end{document}   <<text ends here
+\end{document}  <<text ends here
 
 How the PARAGRAPHS are typeset depends on the document class.
 Normally the first line of a paragraph is indented, and there is no additional space between two paragraphs.
