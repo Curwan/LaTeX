@@ -224,5 +224,5 @@ Label -> Reference
 \label{fig:scatter} -> Figure~\ref{fig:scatter}
 \label{table:data} -> Tabel~\ref{table:data}
 \label{eq:regres} -> Equation~\ref{eq:regres}
-
+FOOTNOTE
 \footnote{footnote text}  >>put sentence footnotes after comma or full stop
