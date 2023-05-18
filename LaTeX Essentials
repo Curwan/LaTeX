@@ -171,7 +171,7 @@ Add Vertical Space with \smallskip, \bigskip or \vspace{...} commands <<only wor
 \\[...] ex. \\[5mm] <<add vertical line space within a paragraph, table or array
 \vspace{-3mm} or \\[-3mm] <<descrease space
 
-FONT change for certain words
+FONT change for certain words. Note that abbreviations are built in
 \textbf{Bold face} or {\bf Bold face}  <<Headings
 \emph{Emphasize} or {\em Emphasize}  <<Emphasis
 \textit{Italic} or {\it Italic}  <<Emphasis, italic word in italic sentence will be normal
