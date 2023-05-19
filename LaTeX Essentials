@@ -2,6 +2,7 @@ SPACES
 Several empty spaces/lines are treated the same as one empty space/line
 An empty line starts a new paragraph
 {} empty parameter adds a space
+\ < adds a space after '\'
 
 SPECIAL CHARACTERS that won't print as text: # $ % ^ & _ { } ~ \ >> have special meaning
 Use prefix backlash to print:  \# \$ \% \^ \& \_ \{ \} \~ \
