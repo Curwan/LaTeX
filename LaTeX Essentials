@@ -227,3 +227,13 @@ Label -> Reference
 \label{eq:regres} -> Equation~\ref{eq:regres}
 FOOTNOTE
 \footnote{footnote text}  >>put sentence footnotes after comma or full stop
+
+BIBTeX
+}
+@online{fininclution2017,
+title = {Financial inclusion},  
+author = {World Bank},  
+year = {2017},
+url = {https://www.worldbank.org/en/topic/financialinclusion/overview},
+note = {Accessed on 20 May 2023},   
+urldate      = {20 May 2023}
